@@ -21,7 +21,7 @@ struct RestaurantContainer: View {
                 .padding(.bottom, 4)
             Spacer().frame(height: 16)
             TabView {
-                ForEach(0..<10)R { index in
+                ForEach(0..<10) { index in
                     IndividualRestaurant()
                         .padding(.horizontal)
                 }
