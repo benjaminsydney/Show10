@@ -18,6 +18,7 @@ struct PostcodeSearchBar: View {
             HStack {
                 TextField("Enter UK Postcode", text: $postcode)
                     .padding(.vertical, 12)
+                    .textContentType(.postalCode)
                     .padding(.horizontal)
                     .background(Color.white)
                     .foregroundStyle(.charcoal)

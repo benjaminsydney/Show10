@@ -9,11 +9,23 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+// NOTE: Postcode passes but is wrong = Ct179dm
+
 struct PostcodeEntry: View {
-    @State private var postcode: String = ""
-    @State private var isValidPostcode: Bool = false
-    @State private var hasSearched: Bool = false
-    @State private var startAnimation: Bool = false
+    @State private var postcode: String
+    @State private var isValidPostcode: Bool
+    @State private var hasSearched: Bool
+    @State private var startAnimation: Bool
+    
+    let restaurants: [Restaurant]
+    
+    init(restaurants: [Restaurant] = []) {
+        self.restaurants = restaurants
+        _postcode = State(initialValue: "")
+        _isValidPostcode = State(initialValue: false)
+        _hasSearched = State(initialValue: false)
+        _startAnimation = State(initialValue: false)
+    }
 
     var body: some View {
         ZStack {
@@ -21,7 +33,7 @@ struct PostcodeEntry: View {
                 ResultsView(
                     postcode: $postcode,
                     hasSearched: $hasSearched,
-                    isValidPostcode: $isValidPostcode
+                    isValidPostcode: $isValidPostcode, restaurants: restaurants
                 )
                 .transition(.move(edge: .bottom))
             } else {
@@ -53,7 +65,7 @@ struct PostcodeEntry: View {
                     .frame(width: 200, height: 200)
                 Spacer()
                 VStack(spacing: 16) {
-                    Text("Please enter a UK Postcode")
+                    Text("Find your closest 10 restaurants.")
                         .foregroundStyle(.mozzarella)
 
                     PostcodeSearchBar(postcode: $postcode) {
@@ -74,9 +86,4 @@ func isValidUKPostcode(_ postcode: String) -> Bool {
     let trimmed = postcode.uppercased().trimmingCharacters(in: .whitespacesAndNewlines)
     let regex = #"^[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}$"#
     return trimmed.range(of: regex, options: .regularExpression) != nil
-}
-
-// MARK: Preview
-#Preview {
-    PostcodeEntry()
 }

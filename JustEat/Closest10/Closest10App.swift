@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct JustEatApp: App {
+struct Closest10App: App {
     var body: some Scene {
         WindowGroup {
             PostcodeEntry()

@@ -11,14 +11,14 @@ struct CuisineTag: View {
     let label: String
     var body: some View {
         Text(label)
-            .foregroundStyle(.mozzarella)
+            .foregroundStyle(.charcoal)
             .padding(.horizontal, 8)
             .padding(.vertical, 4)
-            .background(RoundedRectangle(cornerRadius: 5).foregroundStyle(.aubergine))
+            .background(RoundedRectangle(cornerRadius: 5).foregroundStyle(.cupcake))
             .fixedSize()
     }
 }
 
 #Preview {
-    CuisineTag(label: "Italian")
+        CuisineTag(label: "Italian")
 }
