@@ -70,7 +70,7 @@ struct PostcodeEntry: View {
             VStack {
                 HStack{
                     Picker("Search Mode", selection: $closestMode) {
-                        Text("Close 10").tag(false)
+                        Text("First API 10").tag(false)
                         Text("Closest 10").tag(true)
                     }
                     .pickerStyle(.segmented)
