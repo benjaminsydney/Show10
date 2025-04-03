@@ -1,6 +1,6 @@
 //
 //  RestaurantCard.swift
-//  Just Eat
+//  Show10
 //
 //  Created by Ben Foard on 26/3/25.
 //
@@ -22,10 +22,12 @@ struct RestaurantContainer: View {
 
     var body: some View {
         VStack {
-            Capsule()
-                .frame(width: 40, height: 6)
-                .foregroundColor(.gray)
-                .padding(.top, 8)
+            HStack{
+                Capsule()
+                    .frame(width: 40, height: 6)
+                    .foregroundColor(.gray)
+                    .padding(.top, 8)
+            }
             TabView(selection: $selectedRestaurantID) {
                 ForEach(rankedRestaurants) { ranked in
                     IndividualRestaurant(restaurant: ranked.restaurant, placement: ranked.placement)

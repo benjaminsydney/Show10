@@ -1,6 +1,6 @@
 //
 //  IndividualRestaurant.swift
-//  Just Eat
+//  Show10
 //
 //  Created by Ben Foard on 26/3/25.
 //
@@ -44,9 +44,14 @@ struct IndividualRestaurant: View {
                                 .frame(width: maxIconSize, height: maxIconSize)
                                 .shadow(color: .charcoal.opacity(0.5), radius: 6, x: 0, y: 4)
                         } else if phase.error != nil {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.jetOrange)
-                                .frame(width: maxIconSize, height: maxIconSize)
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.jetOrange)
+                                    .frame(width: maxIconSize, height: maxIconSize)
+                                Text("?")
+                                    .foregroundStyle(.white)
+                                    .bold()
+                            }
                         }
                     }
                     
@@ -65,6 +70,7 @@ struct IndividualRestaurant: View {
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
             .foregroundStyle(.charcoal)
+            .background(.mozzarella.opacity(0.6))
             .background(.thinMaterial)
             .cornerRadius(16)
             .shadow(color: .charcoal.opacity(0.5), radius: 6, x: 0, y: 4)

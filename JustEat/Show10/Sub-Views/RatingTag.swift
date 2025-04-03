@@ -1,6 +1,6 @@
 //
-//  RatingTag.swift
-//  Just Eat
+//  BenRatingTag.swift
+//  Show10
 //
 //  Created by Ben Foard on 26/3/25.
 //
@@ -39,6 +39,8 @@ struct RatingTag: View {
         HStack{
             Spacer()
             HStack(spacing: 2) {
+                Text(String(format: "%.1f", rating))
+                    .padding(.trailing, 2)
                 ForEach(0..<5) { index in
                     let fill = CGFloat(min(max(rating - Double(index), 0), 1))
                     GrayStars(fill: fill)

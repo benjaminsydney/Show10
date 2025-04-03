@@ -24,20 +24,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B60ABEF2D9417CE00826B63 /* Closest10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Closest10.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B60ABFF2D9417CF00826B63 /* Closest10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Closest10Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B60AC092D9417CF00826B63 /* Closest10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Closest10UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B60ABEF2D9417CE00826B63 /* Show10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Show10.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B60ABFF2D9417CF00826B63 /* Show10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Show10Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B60AC092D9417CF00826B63 /* Show10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Show10UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8B60ABF12D9417CE00826B63 /* Closest10 */ = {
+		8B60ABF12D9417CE00826B63 /* Show10 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Closest10;
+			path = Show10;
 			sourceTree = "<group>";
 		};
-		8B60AC022D9417CF00826B63 /* Closest10Tests */ = {
+		8B60AC022D9417CF00826B63 /* Show10Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Closest10Tests;
+			path = Show10Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -70,8 +70,8 @@
 		8B60ABE62D9417CE00826B63 = {
 			isa = PBXGroup;
 			children = (
-				8B60ABF12D9417CE00826B63 /* Closest10 */,
-				8B60AC022D9417CF00826B63 /* Closest10Tests */,
+				8B60ABF12D9417CE00826B63 /* Show10 */,
+				8B60AC022D9417CF00826B63 /* Show10Tests */,
 				8B60ABF02D9417CE00826B63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,9 +79,9 @@
 		8B60ABF02D9417CE00826B63 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B60ABEF2D9417CE00826B63 /* Closest10.app */,
-				8B60ABFF2D9417CF00826B63 /* Closest10Tests.xctest */,
-				8B60AC092D9417CF00826B63 /* Closest10UITests.xctest */,
+				8B60ABEF2D9417CE00826B63 /* Show10.app */,
+				8B60ABFF2D9417CF00826B63 /* Show10Tests.xctest */,
+				8B60AC092D9417CF00826B63 /* Show10UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +89,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B60ABEE2D9417CE00826B63 /* Closest10 */ = {
+		8B60ABEE2D9417CE00826B63 /* Show10 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B60AC132D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Closest10" */;
+			buildConfigurationList = 8B60AC132D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Show10" */;
 			buildPhases = (
 				8B60ABEB2D9417CE00826B63 /* Sources */,
 				8B60ABEC2D9417CE00826B63 /* Frameworks */,
@@ -102,18 +102,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8B60ABF12D9417CE00826B63 /* Closest10 */,
+				8B60ABF12D9417CE00826B63 /* Show10 */,
 			);
-			name = Closest10;
+			name = Show10;
 			packageProductDependencies = (
 			);
 			productName = JustEat;
-			productReference = 8B60ABEF2D9417CE00826B63 /* Closest10.app */;
+			productReference = 8B60ABEF2D9417CE00826B63 /* Show10.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B60ABFE2D9417CF00826B63 /* Closest10Tests */ = {
+		8B60ABFE2D9417CF00826B63 /* Show10Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B60AC162D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Closest10Tests" */;
+			buildConfigurationList = 8B60AC162D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Show10Tests" */;
 			buildPhases = (
 				8B60ABFB2D9417CF00826B63 /* Sources */,
 				8B60ABFC2D9417CF00826B63 /* Frameworks */,
@@ -125,18 +125,18 @@
 				8B60AC012D9417CF00826B63 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8B60AC022D9417CF00826B63 /* Closest10Tests */,
+				8B60AC022D9417CF00826B63 /* Show10Tests */,
 			);
-			name = Closest10Tests;
+			name = Show10Tests;
 			packageProductDependencies = (
 			);
 			productName = JustEatTests;
-			productReference = 8B60ABFF2D9417CF00826B63 /* Closest10Tests.xctest */;
+			productReference = 8B60ABFF2D9417CF00826B63 /* Show10Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8B60AC082D9417CF00826B63 /* Closest10UITests */ = {
+		8B60AC082D9417CF00826B63 /* Show10UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B60AC192D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Closest10UITests" */;
+			buildConfigurationList = 8B60AC192D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Show10UITests" */;
 			buildPhases = (
 				8B60AC052D9417CF00826B63 /* Sources */,
 				8B60AC062D9417CF00826B63 /* Frameworks */,
@@ -147,11 +147,11 @@
 			dependencies = (
 				8B60AC0B2D9417CF00826B63 /* PBXTargetDependency */,
 			);
-			name = Closest10UITests;
+			name = Show10UITests;
 			packageProductDependencies = (
 			);
 			productName = JustEatUITests;
-			productReference = 8B60AC092D9417CF00826B63 /* Closest10UITests.xctest */;
+			productReference = 8B60AC092D9417CF00826B63 /* Show10UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B60ABEA2D9417CE00826B63 /* Build configuration list for PBXProject "Closest10" */;
+			buildConfigurationList = 8B60ABEA2D9417CE00826B63 /* Build configuration list for PBXProject "Show10" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -191,9 +191,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B60ABEE2D9417CE00826B63 /* Closest10 */,
-				8B60ABFE2D9417CF00826B63 /* Closest10Tests */,
-				8B60AC082D9417CF00826B63 /* Closest10UITests */,
+				8B60ABEE2D9417CE00826B63 /* Show10 */,
+				8B60ABFE2D9417CF00826B63 /* Show10Tests */,
+				8B60AC082D9417CF00826B63 /* Show10UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,12 +249,12 @@
 /* Begin PBXTargetDependency section */
 		8B60AC012D9417CF00826B63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B60ABEE2D9417CE00826B63 /* Closest10 */;
+			target = 8B60ABEE2D9417CE00826B63 /* Show10 */;
 			targetProxy = 8B60AC002D9417CF00826B63 /* PBXContainerItemProxy */;
 		};
 		8B60AC0B2D9417CF00826B63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B60ABEE2D9417CE00826B63 /* Closest10 */;
+			target = 8B60ABEE2D9417CE00826B63 /* Show10 */;
 			targetProxy = 8B60AC0A2D9417CF00826B63 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -460,7 +460,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustEat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JustEat";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Show10.app/Show10";
 			};
 			name = Debug;
 		};
@@ -479,7 +479,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustEat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JustEat";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Show10.app/Show10";
 			};
 			name = Release;
 		};
@@ -520,7 +520,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B60ABEA2D9417CE00826B63 /* Build configuration list for PBXProject "Closest10" */ = {
+		8B60ABEA2D9417CE00826B63 /* Build configuration list for PBXProject "Show10" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B60AC112D9417CF00826B63 /* Debug */,
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B60AC132D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Closest10" */ = {
+		8B60AC132D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Show10" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B60AC142D9417CF00826B63 /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B60AC162D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Closest10Tests" */ = {
+		8B60AC162D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Show10Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B60AC172D9417CF00826B63 /* Debug */,
@@ -547,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B60AC192D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Closest10UITests" */ = {
+		8B60AC192D9417CF00826B63 /* Build configuration list for PBXNativeTarget "Show10UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B60AC1A2D9417CF00826B63 /* Debug */,

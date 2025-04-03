@@ -1,6 +1,6 @@
 //
 //  ResultsView.swift
-//  Just Eat
+//  Show10
 //
 //  Created by Ben Foard on 27/3/25.
 //
@@ -12,18 +12,31 @@ struct ResultsView: View {
     @Binding var postcode: String
     @Binding var hasSearched: Bool
     @Binding var isValidPostcode: Bool
+    @Binding var showPostcodeError: Bool
+    @Binding var isLoading: Bool
     @State private var selectedRestaurantID: String?
     @State private var offset: CGFloat = 35
-    @State private var rankedRestaurants: [RankedRestaurant] = []
-    
+    @Binding var rankedRestaurants: [RankedRestaurant]
+    var onSearch: () -> Void
+    var namespace: Namespace.ID
+
     init(postcode: Binding<String>,
          hasSearched: Binding<Bool>,
          isValidPostcode: Binding<Bool>,
-         restaurants: [Restaurant] = []) {
+         showPostcodeError: Binding<Bool>,
+         isLoading: Binding<Bool>,
+         restaurants: [Restaurant] = [],
+         rankedRestaurants: Binding<[RankedRestaurant]>,
+         onSearch: @escaping () -> Void,
+         namespace: Namespace.ID) {
         self._postcode = postcode
         self._hasSearched = hasSearched
         self._isValidPostcode = isValidPostcode
-        _rankedRestaurants = State(initialValue: rankedRestaurants)
+        self._showPostcodeError = showPostcodeError
+        self._isLoading = isLoading
+        self._rankedRestaurants = rankedRestaurants
+        self.onSearch = onSearch
+        self.namespace = namespace
     }
     
     let mapPlacementSize: CGFloat = 20
@@ -52,50 +65,20 @@ struct ResultsView: View {
                             ResultOrderTag(placement: ranked.placement, size: mapPlacementSize * 2)
                         }
                     }
-                    
                 }
             }
+            .id(hasSearched)
             .mapControlVisibility(.hidden)
             .ignoresSafeArea()
             VStack {
                 HStack {
-                    PostcodeSearchBar(postcode: $postcode) {
-                        isValidPostcode = isValidUKPostcode(postcode)
-                        if isValidPostcode {
-                            fetchRestaurants()
-                        }
-                        hasSearched = true
-                    }
+                    PostcodeSearchBar(postcode: $postcode, isLoading: $isLoading, showPostcodeError: $showPostcodeError, isSearchMode: false, onSearch: onSearch)
+                        .matchedGeometryEffect(id: "postcodeBar", in: namespace)
                 }
                 .padding(.horizontal)
                 Spacer()
             }
             RestaurantContainer(offset: $offset, rankedRestaurants: rankedRestaurants, selectedRestaurantID: $selectedRestaurantID)
-        }
-        .onAppear {
-            print("RestaurantContainer appeared with \(rankedRestaurants.count) restaurants")
-            if isValidPostcode && !postcode.isEmpty {
-                fetchRestaurants()
-            }
-        }
-    }
-    
-    private func fetchRestaurants() {
-        APIRequest.shared.fetchRestaurants(for: postcode) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let fetched):
-                    let sortedRestaurants = fetched.sorted { $0.driveDistanceMeters < $1.driveDistanceMeters }
-                    let top10 = sortedRestaurants.prefix(10)
-                    
-                    self.rankedRestaurants = top10.enumerated().map { (index, restaurant) in
-                        RankedRestaurant(restaurant: restaurant, placement: index + 1)
-                    }
-                    print("Fetched \(self.rankedRestaurants.count) restaurants")
-                case .failure(let error):
-                    print("API Error: \(error.localizedDescription)")
-                }
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 //
 //  ResultOrderTag.swift
-//  Just Eat
+//  Show10
 //
 //  Created by Ben Foard on 26/3/25.
 //
@@ -17,7 +17,7 @@ struct ResultOrderTag: View {
             Circle()
                 .fill(Color.jetOrange)
                 .frame(width: size, height: size)
-                .shadow(radius: 1)
+                .shadow(color: .aubergine, radius: 5)
             Text("\(placement)")
                 .foregroundStyle(.mozzarella)
                 .bold(true)

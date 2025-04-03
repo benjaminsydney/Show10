@@ -1,6 +1,6 @@
 //
 //  ResultStructs.swift
-//  Just Eat
+//  Show10
 //
 //  Created by Ben Foard on 26/3/25.
 //

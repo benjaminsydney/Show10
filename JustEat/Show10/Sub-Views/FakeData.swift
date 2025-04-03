@@ -1,6 +1,6 @@
 //
 //  FakeData.swift
-//  Closest10
+//  Show10
 //
 //  Created by Ben Foard on 1/4/25.
 //
@@ -97,7 +97,7 @@ struct FakeData {
                         "defaultDisplayRank": 1,
                         "isTemporaryBoost": false,
                         "isPremier": false,
-                        "logoUrl": "https://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/216757.gif",
+                        "logoUrl": "no",
                         "isTestRestaurant": false,
                         "deals": [],
                         "tags": [],
