@@ -4,7 +4,7 @@
 
 A Swift app designed for iPhone that shows 10 restaurants nearby given a UK postcode using the Just Eat API.
 
-## Getting Started
+## 🏁 Getting Started
 
 You will need Xcode to run this app on your local machine. The app was developed using Xcode 16.2 on a Macbook Pro running macOS 15.3.2.
 
@@ -30,11 +30,40 @@ The app should load onto the build device for you to use.
 
 I felt that TestFlight was overkill for the app in its current state.
 
-## Using the app
+## 📱 Using the app
 
 To use the app, simply open the application on your iOS device, choose whether you want the first 10 results of the API or the closest 10 results to the postcode, type in a UK postcode to the search field. Push the magnifying glass and if the API finds results, you will be taken to the 10 restaurants.
 
-## Future Work
+## 📝 The Assignment
+
+The assignment was clear. To produce code that returned the following data for a given UK postcode using the Just Eat API:
+
+- Restaurant Name
+- Restaurant Cuisines
+- Restaurant Rating - as a number
+- Restaurant Address
+
+Additionally, I have made some assumptions, namely, that using other data from the API is allowed, even if there are only 4 assessed metrics. Therefore, I'm pulling in the restaurant logo and coordinates to give further information to users.
+
+## 🤩 Standout features
+
+### 🗺️ Map View
+
+The app brings up a Map using MapKit to display the coordinates of the 10 restaurants. Allowing users to quickly visualise their options.
+
+### ⭐️ Star Rating
+
+The app not only displays the restaurant rating as a number (as expected) but also fills in that many stars to help users quickly visualise how well rated a location is.
+
+### 🎨 Background Animation
+
+The app uses JET colors (from the Just Eat Brand Box) to create a moving linear background for the start screen and these colours are used throughout the app to cement it's ties to Just Eat's strong branding.
+
+## 🖥️ Tech Stack
+
+The app is built in **Swift** using **SwiftUI** for the UI. Network calls are handled asynchronously using `async/await`. The app is designed for iPhones running iOS however, in my test the app runs well on iPads running iPadOS too.
+
+## 🔮 Future Work
 
 There are many improvements I'd like to complete in the future if I have more time. Here are some of them:
 
@@ -74,7 +103,7 @@ The animated background of PostcodeEntry uses some of the JET-recommended brand 
 
 I know it's possible to preload animations, this could improve performance but I don't have the experience yet to do this so haven't implemented here. Alternatively, I could render the background as a video and compare performance of having a video background instead. This would, of course, increase the size of the app.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 **Maria Harris (Early Careers Lead @ JET)** - For responding quickly to my questions.
 
