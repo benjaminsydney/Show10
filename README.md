@@ -47,6 +47,8 @@ Additionally, I have made some assumptions, namely, that using other data from t
 
 ## 🤩 Standout features
 
+![Image 8](https://github.com/user-attachments/assets/c27505a7-dc56-4875-be7f-fab7a8bfdc07)
+
 ### 🗺️ Map View
 
 The app brings up a Map using MapKit to display the coordinates of the 10 restaurants. Allowing users to quickly visualise their options.
