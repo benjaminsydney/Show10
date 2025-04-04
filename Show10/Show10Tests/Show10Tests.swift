@@ -45,16 +45,16 @@ struct Show10Tests {
             onSearch: {}
         )
         
-        postcodeBinding.wrappedValue = "BN1 6PB"
+        postcodeBinding.wrappedValue = "RG23 8BH"
         
-        #expect(view.postcode == "BN1 6PB", "Postcode is \(view.postcode), expected BN1 6PB")
+        #expect(view.postcode == "RG23 8BH", "Postcode is \(view.postcode), expected RG23 8BH")
     }
     
     // MARK: ResultsView
     // Make fake data and test if ResultsView shows 10 results
     @Test func resultsViewHasTenResults() throws {
         let mockData = getFakeData(inOrder: false)
-        var postcode = "BN1 6PB"
+        var postcode = "RG23 8BH"
         var hasSearched = true
         var isValid = true
         var showError = false
@@ -78,7 +78,7 @@ struct Show10Tests {
     @Test func resultsInOrder() throws {
         let mockData = getFakeData(inOrder: true)
 
-        var postcode = "BN1 6PB"
+        var postcode = "RG23 8BH"
         var hasSearched = true
         var isValid = true
         var showError = false
@@ -104,7 +104,7 @@ struct Show10Tests {
     @Test func restauarantDisplayedProperly() throws {
         let mockData = getFakeData(inOrder: true)
 
-        var postcode = "BN1 6PB"
+        var postcode = "RG23 8BH"
         var hasSearched = true
         var isValid = true
         var showError = false
@@ -124,7 +124,7 @@ struct Show10Tests {
         let restaurant = view.rankedRestaurants[0]
 
         #expect(restaurant.restaurant.name == "Ben's Place 1")
-        #expect(restaurant.restaurant.address == "1 Ben St, Brighton, BN1 6PB")
+        #expect(restaurant.restaurant.address == "1 Ben St, Brighton, RG23 8BH")
         #expect(restaurant.restaurant.cuisines == ["Free Food"])
         #expect(restaurant.restaurant.starRating == 5)
     }
@@ -159,7 +159,7 @@ struct Show10Tests {
                     "address": {
                         "city": "Brighton",
                         "firstLine": "1 Ben St",
-                        "postalCode": "BN1 6PB",
+                        "postalCode": "RG23 8BH",
                         "location": {
                             "type": "Point",
                             "coordinates": [29.9766, 31.1354]

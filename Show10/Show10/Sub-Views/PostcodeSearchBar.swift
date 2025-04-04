@@ -26,6 +26,14 @@ struct PostcodeSearchBar: View {
                         .padding(.horizontal)
                         .background(.thinMaterial)
                         .cornerRadius(50)
+                        .submitLabel(.go)
+                        .onSubmit {
+                            if isValidUKPostcode(postcode) {
+                                onSearch()
+                            } else {
+                                showPostcodeError = true
+                            }
+                        }
 
                     Button {
                         if isValidUKPostcode(postcode) {
@@ -47,6 +55,7 @@ struct PostcodeSearchBar: View {
                                 .background(Circle().fill(isValidUKPostcode(postcode) ? .jetOrange : .aubergine))
                         }
                     }
+                    .allowsHitTesting(isValidUKPostcode(postcode) && !isLoading)
 
                 } else {
                     Button {
@@ -85,7 +94,7 @@ struct PostcodeSearchBar: View {
 
 #Preview {
     PostcodeSearchBar(
-        postcode: .constant("BN1 6PB"), isLoading: .constant(false),
+        postcode: .constant("RG23 8BH"), isLoading: .constant(false),
         showPostcodeError: .constant(false), isSearchMode: true,
         onSearch: { print("Search tapped") }
     )
@@ -93,7 +102,7 @@ struct PostcodeSearchBar: View {
 
 #Preview {
     PostcodeSearchBar(
-        postcode: .constant("BN1 6PB"), isLoading: .constant(false),
+        postcode: .constant("RG23 8BH"), isLoading: .constant(false),
         showPostcodeError: .constant(true), isSearchMode: true,
         onSearch: { print("Search tapped") }
     )
@@ -102,7 +111,7 @@ struct PostcodeSearchBar: View {
 
 #Preview {
     PostcodeSearchBar(
-        postcode: .constant("BN1 6PB"), isLoading: .constant(true),
+        postcode: .constant("RG23 8BH"), isLoading: .constant(true),
         showPostcodeError: .constant(false), isSearchMode: true,
         onSearch: { print("Search tapped") }
     )

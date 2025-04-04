@@ -19,7 +19,7 @@ struct FakeData {
                 "address": {
                     "city": "Brighton",
                     "firstLine": "123 Sushi Street",
-                    "postalCode": "BN1 6PB",
+                    "postalCode": "RG23 8BH",
                     "location": {
                         "type": "Point",
                         "coordinates": [-0.12345, 0.67890]
