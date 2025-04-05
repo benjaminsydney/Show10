@@ -6,7 +6,7 @@ A Swift app designed for iPhone that shows 10 restaurants nearby given a UK post
 
 ## 🏁 Getting Started
 
-You will need Xcode to run this app on your local machine. The app was developed using Xcode 16.2 on a Macbook Pro running macOS 15.3.2.
+You will need Xcode to run this app on your local machine. The app was developed using Xcode 16.2 on a Macbook Pro running macOS 15.3.2. All currently supported iOS 18 devices are supported from the iPhone SE (2nd Gen) up to the new iPhone 16e.
 
 ### Prerequisites
 
@@ -14,7 +14,7 @@ You will need the following things to run the application:
 
 - Xcode running on a Mac
 - Internet connection
-- **[Optional]** Test iOS device
+- **[Optional]** Test iOS 18 device
 
 You will then need to:
 
@@ -26,9 +26,7 @@ You will then need to:
 1. Select either a test iOS device as the build target or generic iOS device (e.g. iPhone 16)
 2. Build the app using the ► button in the top of Xcode
 
-The app should load onto the build device for you to use.
-
-I felt that TestFlight was overkill for the app in its current state.
+The app should load onto the build device for you to use. I felt that TestFlight was overkill for the app in its current state.
 
 ## 📱 Using the app
 
